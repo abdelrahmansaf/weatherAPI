@@ -6,10 +6,6 @@ from functions import  datafilter
 app = Flask(__name__)
 
 
-@app.route('/api/weather/')
-def hello():
-    return "Welcome mate !!"
-
 
 @app.route('/api/weather/<city>', methods=['POST'])
 def citySearch2(city):
