@@ -71,8 +71,13 @@ def citySearch(city):
             }
         return jsonify(valueFalse)
 
-    elif len(data)  > 2 :
-        return jsonify(data)
+    elif len(data) >= 2:
+        dic = {}
+        dataCitys = []
+        for item in data:
+            dataCitys.append(item['title'])
+        dic["Available_Cities"] = dataCitys
+        return jsonify(dic)
 
     
 
